@@ -20,9 +20,7 @@ namespace BaseApp.Controllers
         [HttpGet("GetUnitOfMeasure")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<UnitOfMeasure>))]
         public async Task<IActionResult> GetUnitOfMeasure(string UnitMeasureCode)
-        {
-            string[] testing = { "D1", "D2" };
-            
+        {   
             IEnumerable<UnitOfMeasure> unitOfMeasures = await _UnitOfMeasureRepository.GetUnitMeasureByUnitMeasureCode(UnitMeasureCode);
             return Ok(unitOfMeasures);
 
