@@ -11,7 +11,7 @@ namespace BaseApp
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddSingleton<DBContext>();
             builder.Services.AddScoped<IUnitOfMeasureRepository, UnitOfMeasureRepository>();
-
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
