@@ -1,0 +1,30 @@
+﻿@model List<Contact>
+
+<h2>Daftar Kontak</h2>
+
+@if (Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in Model)
+            {
+                <tr>
+                    <td>@contact.Name</td>
+                    <td>@contact.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Tidak ada kontak yang tersedia.</p>
+}
+
+<a asp-action="Create">Tambah Kontak Baru</a>

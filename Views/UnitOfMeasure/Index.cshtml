@@ -1,0 +1,23 @@
+﻿@model List<UnitOfMeasure>
+
+<h1>Unit of Measure</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UnitOfMeasureCode</th>
+            <th>Name</th>
+            <th>ModifiedDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var unitOfMeasure in Model)
+        {
+            <tr>
+                <td>@unitOfMeasure.UnitMeasureCode</td>
+                <td>@unitOfMeasure.Name</td>
+                <td>@unitOfMeasure.ModifiedDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
